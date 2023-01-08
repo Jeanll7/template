@@ -1,7 +1,7 @@
-## #Border animation
+## Border animation
 
 [Link-Border-animation](https://border-animation-sage.vercel.app/)
 
-## #Form
+## Form
 
 [Link-Form](https://formtemplate.vercel.app/)
