@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap');
+$primary-color: #131086;
+$secondary-color: #b621f3;
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    background: linear-gradient(45deg, $primary-color, $secondary-color);
+    padding: 40px;
+}
+
+.container {
+    min-height: calc(100vh - 40px * 2);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.login-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: content;
+    padding-left: 150px;
+    background-color: white;
+}
+
+.login-right {
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+}
