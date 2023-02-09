@@ -4,4 +4,4 @@
 
 ## Form
 
-[Link-Form](https://formtemplate.vercel.app_blank)
+[Link-Form](https://formtemplate.vercel.app/)
