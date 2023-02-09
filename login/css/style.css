@@ -31,4 +31,54 @@ body {
   background-color: #eee;
   display: flex;
   justify-content: center;
+}
+.login-right img {
+  width: 80%;
+}
+
+.login-header {
+  margin-bottom: 50px;
+}
+.login-header h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+.login-header p {
+  opacity: 0.7;
+}
+
+.login-form {
+  width: 450px;
+}
+.login-form-content {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+.login-form-footer {
+  display: flex;
+  gap: 30px;
+  margin-top: 70px;
+}
+.form-item label:not(.checkboxLabel) {
+  display: inline-block;
+  background-color: white;
+}
+
+input[type=text],
+input[type=password] {
+  border: 1px solid #000;
+  height: 45px;
+  padding: 0 2rem;
+  width: 100%;
+  outline: none;
+  transition: background 0.5s;
+  font-size: 18px;
+  border-radius: 100px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 7px;
 }/*# sourceMappingURL=style.css.map */
