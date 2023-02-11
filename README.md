@@ -1,14 +1,14 @@
 # Template
 
-## Border animation
+### Border animation
 
 [Link-border-animation](https://border-animation.netlify.app/)
 
-## Form
+### Form
 
 [Link-form](https://formtemplate.vercel.app/)
 
-## Login
+### Login
 
 [Link-login](https://login-template03.netlify.app/)
 
