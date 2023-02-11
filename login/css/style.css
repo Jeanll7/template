@@ -22,7 +22,7 @@ body {
 .login-left {
   display: flex;
   flex-direction: column;
-  justify-content: content;
+  justify-content: center;
   padding-left: 150px;
   background-color: white;
 }
@@ -58,7 +58,22 @@ body {
 .login-form-footer {
   display: flex;
   gap: 30px;
-  margin-top: 70px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.login-form-footer a {
+  flex: 6;
+  gap: 15px;
+  border: 1px solid black;
+  border-radius: 100px;
+  padding: 0.6rem;
+  justify-content: center;
+  display: flex;
+  color: black;
+  text-decoration: none;
+}
+.login-form-footer a:hover {
+  background-color: #eee;
 }
 
 .form-item label:not(.checkboxLabel) {
@@ -89,7 +104,7 @@ input[type=password] {
 }
 
 input[type=checkbox] {
-  width: 250px;
+  width: 25px;
   height: 20px;
   accent-color: #131086;
 }
@@ -107,4 +122,27 @@ button {
   cursor: pointer;
 }
 
-/* Responsive *//*# sourceMappingURL=style.css.map */
+/* Responsive */
+@media (max-width: 1350px) {
+  .login-left {
+    padding: 50px !important;
+  }
+  .login-form {
+    width: 90%;
+  }
+  .login-form-footer {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+  .container {
+    grid-template-columns: auto;
+  }
+  .login-right {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */
