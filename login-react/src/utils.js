@@ -1,5 +1,5 @@
 export function login({ email, password }) {
-  const delay = (0.7 + Math.random() * 2) * 1000;
+  const delay = (0.7 + Math.random() * 2) * 1000; // simular lentidão no servidor
 
   return new Promise((resolve, reject) => {
     setTimeout(function () {
