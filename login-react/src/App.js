@@ -26,7 +26,7 @@ function App() {
   };
 
   const handlePassword = (event) => {
-    const { value } = event.target.value;
+    const value = event.target.value;
     setPassword(value);
   };
 
@@ -39,22 +39,20 @@ function App() {
     let values = { email: email, password: password };
     login(values)
       .then(() => {
+        console.log("secesso");
         alert("login efetuado com sucesso.");
       })
       .catch((error) => {
         console.log(error);
         setError(error);
       })
-      .finally(() => {
-        setIsRequesting(false);
-      });
+      .finally(() => setIsRequesting(false));
   };
 
   return (
     <div className="wrapper">
       <div className="login-form">
         <h1>Login Form</h1>
-        {/* Coloque a mensagem de erro de login na div abaixo. Mostre a div somente se houver uma mensagem de erro. */}
         {error && <div className="errorMessage">{error.message}</div>}
         <div className="row">
           <label htmlFor={"email"}>Email</label>
