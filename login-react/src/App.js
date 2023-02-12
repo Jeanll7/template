@@ -11,13 +11,14 @@ import "./index.css";
 // * Desabilite o botão de Login caso o e-mail esteja em branco OU a senha for menor que 6 dígitos.
 // * O botão de login deve disparar a função login(), importada no topo deste arquivo, e passar os dados necessários.
 // * Desabilite o botão de Login equanto você está executando o login.
-// Mostre uma mensagem de erro de login() caso o Login falhe. A mensagem deve ser limpa a cada nova tentativa de Login.
-// Mostre um alerta caso o login seja efetuado com sucesso (javascript alert). Investigue a função login() para entender como ter sucesso na requisição.
+// * Mostre uma mensagem de erro de login() caso o Login falhe. A mensagem deve ser limpa a cada nova tentativa de Login.
+// * Mostre um alerta caso o login seja efetuado com sucesso (javascript alert). Investigue a função login() para entender como ter sucesso na requisição.
 
 function App() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
+  const [isRequesting, setIsRequesting] = useState(false);
 
   const handleEmail = (event) => {
     const value = event.target.value;
@@ -25,23 +26,28 @@ function App() {
   };
 
   const handlePassword = (event) => {
-    const value = event.target.value;
+    const { value } = event.target.value;
     setPassword(value);
   };
 
   const handleSubmit = () => {
     console.log("submited");
 
+    setError(null);
+    setIsRequesting(true);
+
     let values = { email: email, password: password };
     login(values)
-      .then(() => {})
+      .then(() => {
+        alert("login efetuado com sucesso.");
+      })
       .catch((error) => {
         console.log(error);
         setError(error);
+      })
+      .finally(() => {
+        setIsRequesting(false);
       });
-
-    // try { ou pode der usado o try e catch
-    // } catch {}
   };
 
   return (
@@ -72,7 +78,7 @@ function App() {
         <div className="button">
           <button
             onClick={handleSubmit}
-            disabled={email === "" || password.length < 6}
+            disabled={email === "" || password.length < 6 || isRequesting}
           >
             Login
           </button>
