@@ -15,7 +15,7 @@ import "./index.css";
 // * Mostre um alerta caso o login seja efetuado com sucesso (javascript alert). Investigue a função login() para entender como ter sucesso na requisição.
 // * Limpar campo do formulário
 
-function App() {
+function Form() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
@@ -93,4 +93,4 @@ function App() {
   );
 }
 
-export default App;
+export default Form;
