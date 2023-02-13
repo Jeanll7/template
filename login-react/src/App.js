@@ -13,6 +13,7 @@ import "./index.css";
 // * Desabilite o botão de Login equanto você está executando o login.
 // * Mostre uma mensagem de erro de login() caso o Login falhe. A mensagem deve ser limpa a cada nova tentativa de Login.
 // * Mostre um alerta caso o login seja efetuado com sucesso (javascript alert). Investigue a função login() para entender como ter sucesso na requisição.
+// * Limpar campo do formulário
 
 function App() {
   const [email, setEmail] = useState("");
@@ -35,6 +36,7 @@ function App() {
 
     setError(null);
     setIsRequesting(true);
+    clearForm();
 
     let values = { email: email, password: password };
     login(values)
@@ -48,6 +50,11 @@ function App() {
       })
       .finally(() => setIsRequesting(false));
   };
+
+  function clearForm() {
+    setEmail("");
+    setPassword("");
+  }
 
   return (
     <div className="wrapper">
