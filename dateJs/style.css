@@ -1,3 +1,19 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #222;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.box {
+    border: 2px solid #b17d7d;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    box-shadow: 1px 0 20px 5px #a2a0c7;
 }
