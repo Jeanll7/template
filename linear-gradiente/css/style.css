@@ -1,0 +1,21 @@
+body {
+    font-family: 'Orbitron', sans-serif;
+    display: flex;
+    align-items: center;
+    height: 95vh;
+    text-align: center;
+    justify-content: center;
+    place-items: center;
+    animation: animation 2s ease alternate infinite;
+    background: linear-gradient(-80deg, #00f5ff, #ff00ff, #ffff00), no-repeat;
+    background-size: 300% 300%;
+}
+
+@keyframes animation {
+    from {
+        background-position: 0 50%;
+    }
+    to {
+        background-position: 100% 50%;
+    }
+}

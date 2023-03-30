@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+    box-sizing: border-box;
+    background-color: #ddd;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.btn:focus,
+.btn::-moz-focus-inner {
+    outline: none;
+    border: none;
+}
+
+.btn {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.btn-green {
+    background: green;
+    color: #fff;
+    box-shadow: 0 5px 0 #006000;
+}
+
+.btn-green:hover {
+    background: #006000;
+    box-shadow: 0 5px 0 #003f00;
+}
+
+.btn-purple {
+    background: purple;
+    color: #fff;
+    box-shadow: 0 5px 0 #670167;
+}
+
+.btn-purple:hover {
+    background: #670167;
+    box-shadow: 0 5px 0 #470047;
+}
+
+.btn-red {
+    background: red;
+    color: #fff;
+    box-shadow: 0 5px 0 #d20000;
+}
+
+.btn-red:hover {
+    background: #d20000;
+    box-shadow: 0 5px 0 #b00000;
+}
+
+.btn-green:active,
+.btn-purple:active,
+.btn-red:active {
+    position: relative;
+    top: 5px;
+    box-shadow: none;
+}
